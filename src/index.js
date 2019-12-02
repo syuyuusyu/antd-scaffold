@@ -6,6 +6,7 @@ import { Router } from 'react-router-dom';
 import { Provider } from 'mobx-react';
 import {createBrowserHistory} from 'history';
 import RootStore from './config/rootStore';
+import {Main} from './modules/main'
 
 
 
@@ -15,7 +16,7 @@ const history = createBrowserHistory();
 ReactDOM.render(
     <Provider rootStore={new RootStore()} >
         <Router history={history}>
-            <div>main</div>
+            <Main/>
         </Router>
     </Provider>,
     document.getElementById('app')

@@ -25,7 +25,7 @@ const config = {
                         presets: ['@babel/preset-env', '@babel/preset-react'],
                         plugins: [
                             '@babel/plugin-transform-runtime',
-                            'syntax-dynamic-import',
+                            '@babel/syntax-dynamic-import',
                             [
                                 'import',
                                 {
@@ -73,7 +73,7 @@ if (process.env.NODE_ENV === 'development') {
     config.devServer = {
         port: 3000,
         contentBase: path.resolve(__dirname, 'src/public'),
-        before: require(path.resolve(__dirname, 'src/local-service/index.js')),
+        //before: require(path.resolve(__dirname, 'src/local-service/index.js')),
         hot: false,
         /* 访问内容的重写（当http请求的地址匹配不到内容时，根据重写规则重写返回内容，可用于解决前端路由页面刷新时路由不匹配的问题） */
         historyApiFallback: true
